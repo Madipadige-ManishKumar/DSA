@@ -15,8 +15,9 @@ class Solution {
                 j--;
             }
             if(j>=0&&i<arr.length){
-            if (Math.min(arr[i],arr[j])*Math.abs(i-j)>my_max){
-            my_max=Math.min(arr[i],arr[j])*Math.abs(i-j);
+                int current=Math.min(arr[i],arr[j])*Math.abs(i-j);
+            if (current>my_max){
+            my_max=current;
             }
             }
         }
