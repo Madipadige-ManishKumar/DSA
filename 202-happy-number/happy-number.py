@@ -1,22 +1,18 @@
 class Solution(object):
-    def happycheck(self, seen, n):
-        if n == 1:
+    def happycheck(self,arr,n):
+        if int(n) ==1:
             return True
-        elif n in seen:
+        elif n in arr:
             return False
-        else:
-            seen.add(n)
-            total = 0
-            while n > 0:
-                digit = n % 10
-                total += digit * digit
-                n //= 10
-            return self.happycheck(seen, total)
-
+        arr.append(n)
+        sum=0
+        for i in str(n):
+            i=int(i)
+            sum+=(i*i)
+        return self.happycheck(arr,sum)
     def isHappy(self, n):
         """
         :type n: int
         :rtype: bool
         """
-        return self.happycheck(set(), n)
-
+        return self.happycheck([],str(n))
