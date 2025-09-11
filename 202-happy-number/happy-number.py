@@ -4,11 +4,11 @@ class Solution(object):
             return True
         elif n in arr:
             return False
-        arr.append(n)
         sum=0
         for i in str(n):
             i=int(i)
             sum+=(i*i)
+        arr.append(n)
         return self.happycheck(arr,sum)
     def isHappy(self, n):
         """
