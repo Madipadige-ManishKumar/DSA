@@ -14,7 +14,7 @@ class MyStack {
             q2.add(q1.get(0));
             q1.remove(0);
         }
-        ArrayList t = q1;
+        ArrayList <Integer> t = q1;
         q1=q2;
         q2=t;
 
