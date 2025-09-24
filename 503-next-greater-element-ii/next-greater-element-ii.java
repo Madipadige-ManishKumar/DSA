@@ -1,6 +1,7 @@
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
         int res[] = new int[nums.length];
+        Stack <Integer> st = new Stack();
         for(int i=0;i<nums.length;i++)
         {
             int  j= i+1;
