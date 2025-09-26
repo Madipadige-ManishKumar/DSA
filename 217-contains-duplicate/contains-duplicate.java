@@ -5,22 +5,14 @@ class Solution {
         {
             if(map.containsKey(i))
             {
-                int c=map.get(i);
-                c++;
-                map.put(i,c);
+                return true;
             }
             else
             {
                 map.put(i,1);
             }
         }
-        for (Map.Entry<Integer, Integer> en :map.entrySet())
-        {
-            int key=en.getKey();
-            int value =en.getValue();
-            if(value>1)
-            return true;
-        }
+       
         return false;
     }
 }
