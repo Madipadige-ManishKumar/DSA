@@ -14,12 +14,10 @@ class Solution {
                 map.put(i,1);
             }
         }
-        System.out.println(map);
         for (Map.Entry<Integer, Integer> en :map.entrySet())
         {
             int key=en.getKey();
             int value =en.getValue();
-            System.out.println(value+"the value ");
             if(value>1)
             return true;
         }
