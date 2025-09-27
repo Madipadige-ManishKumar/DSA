@@ -9,16 +9,12 @@ class Solution {
         int max = sum;
         while(l!=0)
         {
-            
-            
             sum-=nums[l];
             l++;
             l=l%nums.length;
-            
             r++;
             r=r%nums.length;
             sum+=nums[r];
-            System.out.println("L: "+nums[l]+"R: "+nums[r]+"sum: "+sum);
             if(sum>max)
             max=sum;
         }
