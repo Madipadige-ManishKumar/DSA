@@ -14,33 +14,17 @@
  * }
  */
 class Solution {
-    public int maxDepth(TreeNode root) {
-        if (root == null)
+    public int finddepth(TreeNode node)
+    {
+        
+        if(node == null)
         return 0;
-        ArrayList <TreeNode> queue = new ArrayList<>();
-        int maxdep=0;
-        queue.add(root);
-        queue.add(null);
-        while(queue.size()>0)
-        {
-            TreeNode temp = queue.remove(0);
-            if(temp == null )
-            {
-                maxdep++;
-                if (queue.size()>0)
-                {
-                    queue.add(null);
-                }
-            }
-            if (temp != null){
-            if(temp.left != null)
-            {
-                queue.add(temp.left);
-            }
-            if (temp.right != null)
-            queue.add(temp.right);
-            }
-        }
-        return maxdep;
+        int left,right;
+        left = this.finddepth(node.left);
+        right= this.finddepth(node.right);
+        return Math.max(left,right)+1;
+    }
+    public int maxDepth(TreeNode root) {
+     return this.finddepth(root);
     }
 }
