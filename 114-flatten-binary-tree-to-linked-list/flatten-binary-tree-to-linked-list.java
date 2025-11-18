@@ -16,12 +16,15 @@ class Solution {
             if (temp.left != null)
                 stack.add(temp.left);
         }
-
-        TreeNode temp = res.get(0);
+        // [1 2 3 4 5 6]
+        for(TreeNode temp:res){
+        temp = res.get(0);
         for (int i = 1; i < res.size(); i++) {
             temp.left = null;
             temp.right = res.get(i);
             temp = temp.right;
+            }
         }
+        root = res.get(0);
     }
 }
