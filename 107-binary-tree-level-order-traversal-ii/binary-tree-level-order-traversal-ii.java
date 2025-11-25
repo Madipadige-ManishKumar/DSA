@@ -25,7 +25,6 @@ class Solution {
         queue.add(null);
         while(!queue.isEmpty())
         {
-            System.out.println(queue.size()+" "+res.size()+" "+level.size());
             TreeNode node = queue.remove(0);
             if(node == null)
             {
