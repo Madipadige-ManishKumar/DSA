@@ -1,12 +1,12 @@
 class Solution {
     public void bfs(int start , int[][] adj , int []vis)
     {
-        Queue<Integer>queue = new LinkedList<>();
+        ArrayList<Integer>queue = new ArrayList<>();
         queue.add(start);
         vis[start]=1;
         while(!queue.isEmpty())
         {
-            int node = queue.poll();
+            int node = queue.remove(0);
             int adjnodes []  = adj[node];
             for(int i=0;i<adjnodes.length;i++)
             {
