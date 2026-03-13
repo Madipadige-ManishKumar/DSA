@@ -18,7 +18,6 @@ class Solution {
         Queue<TreeNode> q = new LinkedList<>();
         if(root == null)
         return 0;
-        ArrayList<Integer> level = new ArrayList<>();
         q.offer(root);
         q.add(null);
         int sum =0;
