@@ -6,15 +6,12 @@
 class Solution(object):
     def list_sort(self,head1):
         cur11=head1
-        print("In the sort function ")
-
         l=[]
         while cur11:
             l.append(cur11.val)
             cur11=cur11.next
         i=0
         l=sorted(l)
-        print(l)
         cur11=head1
         while cur11:
             cur11.val=l[i]
