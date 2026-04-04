@@ -1,24 +1,26 @@
-import java.util.*;
-
 class Solution {
-    static ArrayList<Integer> nextSmallerEle(int[] nums) {
-        int n = nums.length;
+    static ArrayList<Integer> nextSmallerEle(int[] arr) {
+        // code here
         Stack<Integer> st = new Stack<>();
-        int[] ans = new int[n];
-
-        for (int i = n - 1; i >= 0; i--) {
-            while (!st.isEmpty() && st.peek() >= nums[i]) {
+        int n = arr.length;
+        ArrayList<Integer> res = new ArrayList<>();
+        
+        for(int i=n-1;i>=0;i--)
+        {
+            while(!(st.empty()) && st.peek()>=arr[i])
+            {
                 st.pop();
             }
-            ans[i] = st.isEmpty() ? -1 : st.peek();
-            st.push(nums[i]);
+            
+            if(st.empty())
+            res.add(-1);
+            else
+            res.add(st.peek());
+            
+            st.push(arr[i]);
         }
-
-        // Convert array to ArrayList
-        ArrayList<Integer> res = new ArrayList<>(n);
-        for (int val : ans) {
-            res.add(val);
-        }
+        Collections.reverse(res);
         return res;
+        
     }
 }
