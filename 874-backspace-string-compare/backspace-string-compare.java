@@ -32,9 +32,7 @@ f
             st.pop();
             st1.pop();
         }
-        if(st.empty() && st1.empty())
-        return true;
-        else
-        return false;
+        return (st.empty() && st1.empty());
+  
     }
 }
